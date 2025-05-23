@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Sogang';
+    src: url('../fonts/SOGANG_UNIVERSITY_for_windows.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Sogang', Arial, sans-serif;
+    background-image: url('../images/login_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+}

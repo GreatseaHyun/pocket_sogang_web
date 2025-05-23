@@ -6,6 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <title>회원가입</title>
+
 </head>
 <body>
     <form id="form1" runat="server">

@@ -3,7 +3,21 @@
 <!DOCTYPE html>
 <html>
 <head runat="server">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <title>환영합니다</title>
+    <style>
+    body {
+        background-image: url('images/login_bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
 </head>
 <body>
     <form id="form1" runat="server">
