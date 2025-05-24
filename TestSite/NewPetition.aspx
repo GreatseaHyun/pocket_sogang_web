@@ -4,6 +4,7 @@
 <html>
 <head runat="server">
     <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <title>청원 작성</title>
 </head>
 <body>

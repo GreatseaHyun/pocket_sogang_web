@@ -4,11 +4,12 @@
 <html>
 <head runat="server">
     <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>서강챗봇</title>
     <style>
         a[href^="tel:"] {
-            color: blue;               
+            color: darkred;               
             text-decoration: none;     /* 밑줄 제거 */
             font-weight: normal;       /* 굵기 기본 */
             font-family: inherit;      /* 기본 폰트 */
