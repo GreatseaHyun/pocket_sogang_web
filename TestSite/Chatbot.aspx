@@ -35,7 +35,7 @@
 
         .chat-header {
             text-align: center;
-            font-size: 20px;
+            font-size: 28px;
             margin-bottom: 10px;
             color: #333;
         }
