@@ -12,7 +12,7 @@ public partial class Chatbot : System.Web.UI.Page
 {
     // 네가 발급받은 실제 Gemini API 키
     private string apiKey = "AIzaSyDvA21aGaxil3za1mIF-N5GFMaiAntEi-Q";
-    
+
     // 최초 로딩 시 기본 컨텍스트 (서강대 설명 등)를 세션에 저장
     private const string SYSTEM_PROMPT = "너는 서강대학교 학생을 위한 AI 도우미야. 질문이 학사일정, " +
         "부서연결, 장학금, 수강신청, 성적, 교수, 서강대 역사 등과 관련되어 있다면 관련된 서강대 정보를 바탕으로 정확하고 간결하게 설명해줘. " +
@@ -24,7 +24,7 @@ public partial class Chatbot : System.Web.UI.Page
         {
             Session["BaseContext"] = SYSTEM_PROMPT;
         }
-        
+
     }
 
     protected void btnAsk_Click(object sender, EventArgs e)
@@ -47,13 +47,13 @@ public partial class Chatbot : System.Web.UI.Page
         //var pnumData = JsonConvert.DeserializeObject<List<Dictionary<string, string>>>(pnumJson);
 
         string cEvaluationPath = Server.MapPath("~/data/Sogang_CourseEvaluation.json");
-        string cEvaluationJson =File.ReadAllText(cEvaluationPath);
+        string cEvaluationJson = File.ReadAllText(cEvaluationPath);
 
         string sogangIdeology = File.ReadAllText(Server.MapPath("~/data/Sogang_ideology.txt"));
         string sogangmajor = File.ReadAllText(Server.MapPath("~/data/Sogang_major.txt"));
-        string sogangexchange= File.ReadAllText(Server.MapPath("~/data/Sogang_exchange.txt"));
+        string sogangexchange = File.ReadAllText(Server.MapPath("~/data/Sogang_exchange.txt"));
         string sogangschoolfood = File.ReadAllText(Server.MapPath("~/data/Sogang_Schoolfood(25.5.19-25.5.23).txt"));
-        
+
 
         string prompt = $"{SYSTEM_PROMPT}\n\n"
                   + $"[서강대 2025 학사일정]\n{scheduleJson}\n\n"
@@ -151,5 +151,10 @@ public partial class Chatbot : System.Web.UI.Page
         {
             lblAnswer.Text = "에러 발생: " + ex.Message;
         }
+    }
+
+    protected void txtQuestion_TextChanged(object sender, EventArgs e)
+    {
+
     }
 }
